@@ -1,15 +1,11 @@
-
-
-'use client';
-
 export default function AuditPage() {
   return (
-    <main className="min-h-screen bg-black text-white flex items-center justify-center">
+    <main className="min-h-screen flex items-center justify-center bg-black text-white">
       <a
         href="https://forms.gle/UoUtjkZrhz5bbJ7f6"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-block rounded-md bg-white px-6 py-3 text-black font-semibold"
+        className="inline-block rounded-md bg-white px-6 py-3 font-semibold text-black"
       >
         Request Audit
       </a>
