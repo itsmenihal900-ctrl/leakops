@@ -1,15 +1,19 @@
-export default function Page() {
-  return (
-    <main style={{ padding: "40px" }}>
-      <h1>Request Audit</h1>
+"use client";
 
-      <a
-        href="https://forms.gle/YOUR_FORM_LINK"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Request Audit
-      </a>
+import { useEffect } from "react";
+
+export default function AuditPage() {
+  useEffect(() => {
+    window.location.replace(
+      "https://docs.google.com/forms/d/e/1FAIpQLSd9MStmB247Cx4-AIC0AdqaP0BoGGqX8_v3xVTkTcFMda_jgA/viewform"
+    );
+  }, []);
+
+  return (
+    <main className="min-h-screen bg-white text-black flex items-center justify-center px-6">
+      <p className="text-gray-500">Redirecting to Revenue Leak Audit…</p>
     </main>
   );
 }
+
+
