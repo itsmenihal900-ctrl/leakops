@@ -1,127 +1,147 @@
-'use client';
-
 export default function Home() {
   return (
-    <main className="bg-white text-black">
+    <main className="bg-black text-white">
 
-      {/* ================= HERO ================= */}
-      <section className="min-h-screen flex items-center justify-center px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      {/* HERO */}
+      <section className="min-h-screen flex flex-col items-center justify-center text-center px-6">
+        <h1 className="text-4xl md:text-5xl font-bold max-w-4xl">
+          You’re Losing Revenue Every Month — <br /> And You Don’t Know Where.
+        </h1>
 
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            You’re Losing Revenue Every Month —
-            <br />
-            And You Don’t Know Where.
-          </h1>
+        <p className="mt-6 text-lg text-gray-300 max-w-2xl">
+          LeakOps audits your creator business to uncover hidden leaks in leads,
+          funnels, offers, DMs, and systems.
+        </p>
 
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-10">
-            LeakOps audits your creator business to uncover hidden leaks
-            in leads, funnels, offers, DMs, and systems.
-          </p>
+        <a
+          href="/audit"
+          className="mt-8 inline-block bg-white text-black px-8 py-4 rounded-lg text-lg font-medium"
+        >
+          Get a Revenue Leak Audit
+        </a>
 
-          <a
-            href="https://forms.gle/YOUR_FORM_LINK"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-black text-white font-semibold px-8 py-4 rounded-lg"
-          >
-            Get a Revenue Leak Audit
-          </a>
-
-          <p className="text-sm text-gray-500 mt-4">
-            Built for creators already making money (10k+ followers)
-          </p>
-
-        </div>
+        <p className="mt-4 text-sm text-gray-400">
+          Built for creators already making money (10k+ followers)
+        </p>
       </section>
 
-      {/* ================= HOW IT WORKS ================= */}
-      <section className="py-24 px-6">
-        <div className="max-w-5xl mx-auto text-center">
+      {/* WHERE MONEY IS LEAKING */}
+      <section className="py-24 px-6 bg-[#0f172a]">
+        <h2 className="text-3xl font-semibold text-center">
+          Where Your Money Is Actually Leaking
+        </h2>
 
-          <h2 className="text-3xl md:text-4xl font-bold mb-12">
-            How the Revenue Leak Audit Works
-          </h2>
+        <p className="text-center text-gray-400 mt-4 max-w-2xl mx-auto">
+          Most creators are making money — but losing a shocking amount due to
+          invisible system gaps.
+        </p>
 
-          <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6 mt-12 max-w-4xl mx-auto">
+          <div className="bg-[#111827] p-6 rounded-lg">
+            <h3 className="font-semibold">Lead Leaks</h3>
+            <p className="text-gray-400 mt-2">
+              Visitors watch, scroll, or DM — then disappear. No capture. No follow-up.
+            </p>
+          </div>
 
-            <div className="bg-gray-100 p-6 rounded-xl text-left">
-              <h3 className="text-xl font-semibold mb-2">1. Diagnose</h3>
-              <p className="text-gray-600">
-                We analyze your traffic, funnels, offers, and DMs to find
-                exactly where money is leaking.
-              </p>
-            </div>
+          <div className="bg-[#111827] p-6 rounded-lg">
+            <h3 className="font-semibold">Funnel Breaks</h3>
+            <p className="text-gray-400 mt-2">
+              Funnels exist, but friction and confusion kill conversions.
+            </p>
+          </div>
 
-            <div className="bg-gray-100 p-6 rounded-xl text-left">
-              <h3 className="text-xl font-semibold mb-2">2. Reveal</h3>
-              <p className="text-gray-600">
-                You get a clear breakdown of what’s broken, missing,
-                or underperforming.
-              </p>
-            </div>
+          <div className="bg-[#111827] p-6 rounded-lg">
+            <h3 className="font-semibold">DM Monetization Gaps</h3>
+            <p className="text-gray-400 mt-2">
+              Conversations happen — sales don’t. No structure. No close.
+            </p>
+          </div>
 
-            <div className="bg-gray-100 p-6 rounded-xl text-left">
-              <h3 className="text-xl font-semibold mb-2">3. Fix</h3>
-              <p className="text-gray-600">
-                Exact actions to plug leaks and increase revenue — fast.
-              </p>
-            </div>
-
+          <div className="bg-[#111827] p-6 rounded-lg">
+            <h3 className="font-semibold">Weak Offers</h3>
+            <p className="text-gray-400 mt-2">
+              You’re selling — but not at your real potential.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* ================= FIX THE LEAKS ================= */}
-      <section className="py-24 px-6 bg-gray-50">
-        <div className="max-w-5xl mx-auto text-center">
+      {/* HOW IT WORKS */}
+      <section className="py-24 px-6 bg-black">
+        <h2 className="text-3xl font-semibold text-center">
+          How the Revenue Leak Audit Works
+        </h2>
 
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Fix the Leaks Before You Scale More Traffic
-          </h2>
+        <div className="grid md:grid-cols-3 gap-6 mt-12 max-w-5xl mx-auto">
+          <div className="bg-[#111827] p-6 rounded-lg">
+            <h3 className="font-semibold">1. Diagnose</h3>
+            <p className="text-gray-400 mt-2">
+              We analyze your traffic, offers, funnels, and DMs to find leaks.
+            </p>
+          </div>
 
-          <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-            Scaling broken systems doesn’t grow revenue —
-            it burns money faster. This audit shows you exactly
-            what to fix before you scale.
-          </p>
+          <div className="bg-[#111827] p-6 rounded-lg">
+            <h3 className="font-semibold">2. Reveal</h3>
+            <p className="text-gray-400 mt-2">
+              You get a clear breakdown of what’s broken or underperforming.
+            </p>
+          </div>
 
-          <p className="text-yellow-600 mb-6">
-            ⚠ Limited capacity: Only 5 audits per week
-          </p>
-
-          <a
-            href="https://forms.gle/YOUR_FORM_LINK"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-black text-white font-semibold px-8 py-4 rounded-lg"
-          >
-            Get a Revenue Leak Audit
-          </a>
-
+          <div className="bg-[#111827] p-6 rounded-lg">
+            <h3 className="font-semibold">3. Fix</h3>
+            <p className="text-gray-400 mt-2">
+              Exact actions to plug leaks and increase revenue — fast.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* ================= WHY LEAKOPS EXISTS ================= */}
-      <section className="py-24 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      {/* FOR / NOT FOR */}
+      <section className="py-24 px-6 bg-[#0f172a]">
+        <h2 className="text-3xl font-semibold text-center">
+          This Is For You If…
+        </h2>
 
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Why LeakOps Exists
-          </h2>
+        <div className="grid md:grid-cols-2 gap-6 mt-12 max-w-4xl mx-auto">
+          <div className="bg-[#111827] p-6 rounded-lg">
+            <ul className="space-y-2 text-gray-300">
+              <li>✔ You already make money as a creator or coach</li>
+              <li>✔ Your growth has plateaued</li>
+              <li>✔ You know systems matter but haven’t fixed them</li>
+            </ul>
+          </div>
 
-          <p className="text-gray-600 leading-relaxed">
-            LeakOps was built after studying how creators with real
-            audiences lose money — not because of traffic,
-            but because of broken systems.
-            <br /><br />
-            Most creators don’t need more content.
-            They need clarity on what’s leaking.
-            <br /><br />
-            This audit focuses on systems, not motivation.
-          </p>
-
+          <div className="bg-[#111827] p-6 rounded-lg">
+            <ul className="space-y-2 text-gray-300">
+              <li>✖ Not for beginners</li>
+              <li>✖ Not for “post more content” advice</li>
+              <li>✖ Not theory — this is execution</li>
+            </ul>
+          </div>
         </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="py-24 text-center bg-black">
+        <h2 className="text-3xl font-semibold">
+          Fix the Leaks Before You Scale More Traffic
+        </h2>
+
+        <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+          Scaling broken systems doesn’t grow revenue — it burns money faster.
+        </p>
+
+        <a
+          href="/audit"
+          className="mt-8 inline-block bg-white text-black px-8 py-4 rounded-lg text-lg"
+        >
+          Get a Revenue Leak Audit
+        </a>
+
+        <p className="mt-4 text-sm text-gray-500">
+          Limited capacity — only a few audits per week.
+        </p>
       </section>
 
     </main>
