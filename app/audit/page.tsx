@@ -1,98 +1,72 @@
-"use client";
-
 export const metadata = {
-  title: "Revenue Leak Audit for Creators – Find What’s Costing You Sales",
+  title: "Revenue Leak Audit for Creators | CreatorOps Studio",
   description:
-    "A paid revenue leak audit that reveals exactly where creators lose leads, sales, and money — and how to fix it fast.",
+    "A brutal audit that finds where creators lose leads, sales, and money — and how to fix it fast.",
 };
 
 export default function AuditPage() {
   return (
-    <main className="min-h-screen bg-white text-black px-6 py-20">
-      <div className="max-w-3xl mx-auto space-y-12">
+    <main className="min-h-screen bg-black text-white px-6 py-16">
+      <div className="max-w-3xl mx-auto">
+        {/* Hero */}
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+          A brutal audit that finds where creators lose leads, sales, and money —
+          <span className="block mt-2 text-gray-300">
+            and how to fix it fast.
+          </span>
+        </h1>
 
-        {/* HERO */}
-        <section className="text-center space-y-6">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-            Revenue Leak Audit
-          </h1>
+        <p className="mt-6 text-lg text-gray-400">
+          Most creators don’t have a traffic problem.
+          <br />
+          They have a <strong>leak problem</strong>.
+        </p>
 
-          <p className="text-lg text-gray-600">
-            A paid diagnostic that shows exactly where your creator business is
-            leaking leads, sales, and money — and what to fix first.
+        {/* What this is */}
+        <div className="mt-10 space-y-4 text-gray-300">
+          <p>
+            The <strong>Revenue Leak Audit</strong> is a deep diagnostic of your:
           </p>
-
-          <button
-            onClick={() =>
-              window.open(
-                "https://docs.google.com/forms/d/e/1FAIpQLSd9MStmB247Cx4-AlC0AdqaP0BoGGqX8_v3xVTkTcFMda_jgA/viewform",
-                "_blank"
-              )
-            }
-            className="mt-6 inline-block rounded-md bg-black px-8 py-4 text-white font-semibold hover:opacity-90 transition"
-          >
-            Start the Audit
-          </button>
-        </section>
-
-        {/* WHAT YOU GET */}
-        <section className="space-y-6">
-          <h2 className="text-2xl font-semibold text-center">
-            What This Audit Reveals
-          </h2>
-
-          <ul className="grid gap-4 md:grid-cols-2 text-gray-700">
-            <li>• Where leads drop before converting</li>
-            <li>• Offer or pricing mistakes killing sales</li>
-            <li>• DM & funnel friction points</li>
-            <li>• Traffic that isn’t monetized properly</li>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Lead capture & funnels</li>
+            <li>Offers & pricing logic</li>
+            <li>DM flows & conversion gaps</li>
+            <li>Systems, tools, and handoffs</li>
           </ul>
-        </section>
+        </div>
 
-        {/* WHO IT'S FOR */}
-        <section className="grid md:grid-cols-2 gap-8">
-          <div>
-            <h3 className="font-semibold mb-3">This is for you if:</h3>
-            <ul className="text-gray-700 space-y-2">
-              <li>• You already have an audience</li>
-              <li>• You’re making money but stuck</li>
-              <li>• You want clarity, not motivation</li>
-            </ul>
-          </div>
+        {/* Who it's for */}
+        <div className="mt-12 border border-gray-800 rounded-xl p-6">
+          <h2 className="text-xl font-semibold mb-3">This is for you if:</h2>
+          <ul className="space-y-2 text-gray-300">
+            <li>• You already have an audience (10k+ followers)</li>
+            <li>• You’re making some money, but it’s inconsistent</li>
+            <li>• You feel growth is slower than it should be</li>
+            <li>• You don’t know where you’re bleeding revenue</li>
+          </ul>
+        </div>
 
-          <div>
-            <h3 className="font-semibold mb-3">This is NOT for you if:</h3>
-            <ul className="text-gray-700 space-y-2">
-              <li>• You want free advice</li>
-              <li>• You haven’t started yet</li>
-              <li>• You’re not ready to act</li>
-            </ul>
-          </div>
-        </section>
+        {/* CTA */}
+        <div className="mt-14">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSd9MStmB247Cx4-AlC0AdqaP0BoGGqX8_v3xVTkTcFMda_jgA/viewform"
 
-        {/* FINAL CTA */}
-        <section className="text-center pt-12 border-t">
-          <p className="text-gray-600 mb-4">
-            This audit is limited to serious creators only.
-          </p>
-
-          <button
-            onClick={() =>
-              window.open(
-                "https://docs.google.com/forms/d/e/1FAIpQLSd9MStmB247Cx4-AlC0AdqaP0BoGGqX8_v3xVTkTcFMda_jgA/viewform",
-                "_blank"
-              )
-            }
-            className="inline-block rounded-md bg-black px-8 py-4 text-white font-semibold hover:opacity-90 transition"
+            target="_blank"
+            className="inline-block w-full md:w-auto text-center bg-white text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-200 transition"
           >
-            Get Your Revenue Leak Audit
-          </button>
-        </section>
+            Apply for the Revenue Leak Audit
+          </a>
 
+          <p className="mt-4 text-sm text-gray-500">
+            Not everyone is accepted. If it’s a good fit, you’ll receive next
+            steps by email.
+          </p>
+        </div>
       </div>
     </main>
   );
 }
+
 
 
 
