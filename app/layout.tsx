@@ -13,43 +13,44 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  title: "CreatorOps Studio – Fix Hidden Revenue Leaks",
+
+  description:
+    "A brutal audit that finds where creators lose leads, sales, and money — and how to fix it fast.",
+
   metadataBase: new URL("https://creatorops.studio"),
 
-  title: "CreatorOps Studio – Fix Hidden Revenue Leaks",
-  description:
-    "CreatorOps audits your creator business to uncover hidden leaks in leads, funnels, offers, DMs, and systems.",
-
   openGraph: {
-    type: "website",
-    url: "https://creatorops.studio",
-    siteName: "CreatorOps Studio",
     title: "You’re Losing Revenue Every Month — And You Don’t Know Where.",
     description:
-      "CreatorOps audits your creator business to uncover hidden leaks in leads, funnels, offers, DMs, and systems.",
+      "A brutal audit that finds where creators lose leads, sales, and money — and how to fix it fast.",
+    url: "https://creatorops.studio",
+    siteName: "CreatorOps Studio",
     images: [
       {
-        url: "https://creatorops.studio/og-image.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "CreatorOps Revenue Leak Audit",
       },
     ],
+    type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
     title: "You’re Losing Revenue Every Month",
     description:
-      "CreatorOps audits your creator business to uncover hidden leaks in leads, funnels, offers, DMs, and systems.",
-    images: ["https://creatorops.studio/og-image.png"],
+      "A brutal audit that finds where creators lose leads, sales, and money — and how to fix it fast.",
+    images: ["/og-image.png"],
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
@@ -60,4 +61,5 @@ export default function RootLayout({
     </html>
   );
 }
+
 
