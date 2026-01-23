@@ -155,8 +155,9 @@ export default function AuditPage() {
         </a>
 
         <p style={{ marginTop: "1rem", fontSize: "0.85rem", opacity: 0.6 }}>
-          Not everyone is accepted. If it’s a good fit, you’ll receive next steps
-          by email.
+          Every audit is reviewed personally.
+If we can’t provide meaningful value, you’ll be refunded.
+
         </p>
       </section>
     </main>
