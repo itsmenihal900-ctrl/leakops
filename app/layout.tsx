@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -14,12 +15,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "CreatorOps Studio – Fix Hidden Revenue Leaks",
-
   description:
     "A brutal audit that finds where creators lose leads, sales, and money — and how to fix it fast.",
-
   metadataBase: new URL("https://creatorops.studio"),
-
   openGraph: {
     title: "You’re Losing Revenue Every Month — And You Don’t Know Where.",
     description:
@@ -36,12 +34,11 @@ export const metadata: Metadata = {
     ],
     type: "website",
   },
-
   twitter: {
     card: "summary_large_image",
     title: "You’re Losing Revenue Every Month",
     description:
-      "A brutal audit that finds where creators lose leads, sales, and money — and how to fix it fast.",
+      "A brutal audit that finds where creators lose leads, sales, and money.",
     images: ["/og-image.png"],
   },
 };
@@ -53,6 +50,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      {/* Google Analytics */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-RZKXDZ1947"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RZKXDZ1947');
+        `}
+      </Script>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -61,5 +72,4 @@ export default function RootLayout({
     </html>
   );
 }
-
 
