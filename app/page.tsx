@@ -1,6 +1,18 @@
+import Image from "next/image"
+
 export default function Home() {
   return (
     <main className="bg-black text-white">
+<div className="w-full flex justify-center pt-6">
+  <Image
+    src="/logo.png"
+    alt="CreatorOps Studio Logo"
+    width={160}
+    height={40}
+    priority
+  />
+</div>
+
 
       {/* HERO */}
       <section className="min-h-screen flex flex-col items-center justify-center text-center px-6">
