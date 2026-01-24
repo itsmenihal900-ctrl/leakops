@@ -1,158 +1,171 @@
-
+"use client";
 
 export default function Home() {
   return (
-    <main className="bg-black text-white">
-<div className="w-full flex justify-center pt-6">
-  <img
-    src="/logo.png"
-    alt="CreatorOps Studio Logo"
-    width="160"
-    height="40"
-    
-  />
-</div>
+    <main className="bg-white text-black px-6">
 
+      {/* LOGO */}
+      <div className="flex justify-center pt-8">
+        <img
+          src="/logo.png"
+          alt="CreatorOps Studio"
+          width="160"
+          height="40"
+        />
+      </div>
 
       {/* HERO */}
-      <section className="min-h-screen flex flex-col items-center justify-center text-center px-6">
-        <h1 className="text-4xl md:text-5xl font-bold max-w-4xl">
-          You’re Losing Revenue Every Month — <br /> And You Don’t Know Where.
+      <section className="max-w-4xl mx-auto text-center pt-16 space-y-6">
+        <h1 className="text-4xl md:text-5xl font-bold">
+          Revenue Leak Audit for Creators Making $5K+/Month
         </h1>
 
-        <p className="mt-6 text-lg text-gray-300 max-w-2xl">
-          LeakOps audits your creator business to uncover hidden leaks in leads,
-          funnels, offers, DMs, and systems.
+        <p className="text-lg text-gray-700">
+          Find exactly where sales, leads, and money are leaking — and what to fix first.
+        </p>
+
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          CreatorOps audits your funnels, offers, DMs, and systems to uncover hidden leaks
+          silently killing your revenue — without guesswork or generic advice.
         </p>
 
         <a
           href="/audit"
-          className="mt-8 inline-block bg-white text-black px-8 py-4 rounded-lg text-lg font-medium"
+          className="inline-block mt-6 rounded-md bg-black px-8 py-4 font-semibold text-white hover:opacity-90 transition"
         >
-          Get a Revenue Leak Audit
+          Get My Revenue Leak Breakdown →
         </a>
 
-        <p className="mt-4 text-sm text-gray-400">
-          Built for creators already making money (10k+ followers)
+        <p className="text-sm text-gray-500">
+          For creators already monetizing through coaching, courses, communities, or digital products
         </p>
       </section>
 
-      {/* WHERE MONEY IS LEAKING */}
-      <section className="py-24 px-6 bg-[#0f172a]">
-        <h2 className="text-3xl font-semibold text-center">
-          Where Your Money Is Actually Leaking
-        </h2>
-
-        <p className="text-center text-gray-400 mt-4 max-w-2xl mx-auto">
-          Most creators are making money — but losing a shocking amount due to
-          invisible system gaps.
+      {/* TRUST */}
+      <section className="max-w-4xl mx-auto text-center mt-16 text-gray-700">
+        <p className="font-semibold mb-4">Used by creators monetizing through:</p>
+        <p>
+          Courses • Coaching & Consulting • Newsletters • Communities • Digital Products
         </p>
-
-        <div className="grid md:grid-cols-2 gap-6 mt-12 max-w-4xl mx-auto">
-          <div className="bg-[#111827] p-6 rounded-lg">
-            <h3 className="font-semibold">Lead Leaks</h3>
-            <p className="text-gray-400 mt-2">
-              Visitors watch, scroll, or DM — then disappear. No capture. No follow-up.
-            </p>
-          </div>
-
-          <div className="bg-[#111827] p-6 rounded-lg">
-            <h3 className="font-semibold">Funnel Breaks</h3>
-            <p className="text-gray-400 mt-2">
-              Funnels exist, but friction and confusion kill conversions.
-            </p>
-          </div>
-
-          <div className="bg-[#111827] p-6 rounded-lg">
-            <h3 className="font-semibold">DM Monetization Gaps</h3>
-            <p className="text-gray-400 mt-2">
-              Conversations happen — sales don’t. No structure. No close.
-            </p>
-          </div>
-
-          <div className="bg-[#111827] p-6 rounded-lg">
-            <h3 className="font-semibold">Weak Offers</h3>
-            <p className="text-gray-400 mt-2">
-              You’re selling — but not at your real potential.
-            </p>
-          </div>
-        </div>
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="py-24 px-6 bg-black">
-        <h2 className="text-3xl font-semibold text-center">
+      <section className="max-w-4xl mx-auto mt-24 space-y-6">
+        <h2 className="text-3xl font-bold text-center">
           How the Revenue Leak Audit Works
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-6 mt-12 max-w-5xl mx-auto">
-          <div className="bg-[#111827] p-6 rounded-lg">
-            <h3 className="font-semibold">1. Diagnose</h3>
-            <p className="text-gray-400 mt-2">
-              We analyze your traffic, offers, funnels, and DMs to find leaks.
-            </p>
-          </div>
+        <ol className="space-y-4 text-gray-700">
+          <li>1. You answer a short audit questionnaire</li>
+          <li>2. We map your full revenue path</li>
+          <li>3. We identify the biggest leaks first</li>
+          <li>4. You get a clear, prioritized fix plan</li>
+        </ol>
 
-          <div className="bg-[#111827] p-6 rounded-lg">
-            <h3 className="font-semibold">2. Reveal</h3>
-            <p className="text-gray-400 mt-2">
-              You get a clear breakdown of what’s broken or underperforming.
-            </p>
-          </div>
+        <p className="text-gray-600">
+          No dashboards. No hype. Just clarity.
+        </p>
+      </section>
 
-          <div className="bg-[#111827] p-6 rounded-lg">
-            <h3 className="font-semibold">3. Fix</h3>
-            <p className="text-gray-400 mt-2">
-              Exact actions to plug leaks and increase revenue — fast.
-            </p>
-          </div>
+      {/* WHERE MONEY LEAKS */}
+      <section className="max-w-4xl mx-auto mt-24 space-y-6">
+        <h2 className="text-3xl font-bold text-center">
+          Where Most Creators Actually Lose Money
+        </h2>
+
+        <ul className="space-y-2 text-gray-700">
+          <li>• Confusing or underpriced offers</li>
+          <li>• DMs that stall instead of close</li>
+          <li>• Funnels that drop attention mid-way</li>
+          <li>• No follow-up or systemized conversion</li>
+          <li>• Scaling traffic into broken systems</li>
+        </ul>
+
+        <p className="text-gray-600">
+          More content won’t fix this. Diagnosis will.
+        </p>
+      </section>
+
+      {/* WHO IT'S FOR */}
+      <section className="max-w-4xl mx-auto mt-24 grid md:grid-cols-2 gap-10">
+        <div>
+          <h3 className="text-xl font-semibold mb-4">This Audit Is For You If:</h3>
+          <ul className="space-y-2 text-gray-700">
+            <li>• You’re already making money</li>
+            <li>• You have an active offer</li>
+            <li>• You want clarity, not motivation</li>
+            <li>• You’re tired of guessing</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-4">This Audit Is NOT For You If:</h3>
+          <ul className="space-y-2 text-gray-700">
+            <li>• You’re just starting out</li>
+            <li>• You don’t have an offer yet</li>
+            <li>• You want growth hacks</li>
+            <li>• You expect traffic to fix everything</li>
+          </ul>
         </div>
       </section>
 
-      {/* FOR / NOT FOR */}
-      <section className="py-24 px-6 bg-[#0f172a]">
-        <h2 className="text-3xl font-semibold text-center">
-          This Is For You If…
+      {/* OFFER RECAP */}
+      <section className="max-w-4xl mx-auto mt-24 text-center space-y-6">
+        <h2 className="text-3xl font-bold">
+          Fix the Leaks Before You Scale
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-6 mt-12 max-w-4xl mx-auto">
-          <div className="bg-[#111827] p-6 rounded-lg">
-            <ul className="space-y-2 text-gray-300">
-              <li>✔ You already make money as a creator or coach</li>
-              <li>✔ Your growth has plateaued</li>
-              <li>✔ You know systems matter but haven’t fixed them</li>
-            </ul>
-          </div>
-
-          <div className="bg-[#111827] p-6 rounded-lg">
-            <ul className="space-y-2 text-gray-300">
-              <li>✖ Not for beginners</li>
-              <li>✖ Not for “post more content” advice</li>
-              <li>✖ Not theory — this is execution</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* FINAL CTA */}
-      <section className="py-24 text-center bg-black">
-        <h2 className="text-3xl font-semibold">
-          Fix the Leaks Before You Scale More Traffic
-        </h2>
-
-        <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
-          Scaling broken systems doesn’t grow revenue — it burns money faster.
+        <p className="text-gray-700">
+          Scaling broken systems burns money faster.
+          This audit shows you what to fix before you scale.
         </p>
 
         <a
           href="/audit"
-          className="mt-8 inline-block bg-white text-black px-8 py-4 rounded-lg text-lg"
+          className="inline-block rounded-md bg-black px-8 py-4 font-semibold text-white hover:opacity-90 transition"
         >
-          Get a Revenue Leak Audit
+          Get My Revenue Leak Breakdown →
+        </a>
+      </section>
+
+      {/* AUTHORITY */}
+      <section className="max-w-4xl mx-auto mt-24 text-center space-y-6 text-gray-700">
+        <h2 className="text-2xl font-bold text-black">
+          Why CreatorOps Exists
+        </h2>
+
+        <p>
+          Most creators are taught how to grow — not how to operate.
+          Revenue doesn’t scale from motivation.
+          It scales when systems stop leaking.
+        </p>
+
+        <p>
+          We don’t sell hype.
+          We fix operations.
+        </p>
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="max-w-4xl mx-auto mt-24 mb-32 text-center space-y-6">
+        <h2 className="text-3xl font-bold">
+          Stop Guessing Where the Money Went
+        </h2>
+
+        <p className="text-gray-700">
+          If you’re already making money, the fastest growth
+          comes from fixing what’s leaking.
+        </p>
+
+        <a
+          href="/audit"
+          className="inline-block rounded-md bg-black px-8 py-4 font-semibold text-white hover:opacity-90 transition"
+        >
+          Get My Revenue Leak Breakdown →
         </a>
 
-        <p className="mt-4 text-sm text-gray-500">
-          Limited capacity — only a few audits per week.
+        <p className="text-sm text-gray-500">
+          Limited capacity to keep audits high-quality.
         </p>
       </section>
 
