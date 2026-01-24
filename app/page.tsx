@@ -1,15 +1,15 @@
-import Image from "next/image"
+
 
 export default function Home() {
   return (
     <main className="bg-black text-white">
 <div className="w-full flex justify-center pt-6">
-  <Image
+  <img
     src="/logo.png"
     alt="CreatorOps Studio Logo"
-    width={160}
-    height={40}
-    priority
+    width="160"
+    height="40"
+    
   />
 </div>
 
