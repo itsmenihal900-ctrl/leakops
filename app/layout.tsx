@@ -16,12 +16,19 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "CreatorOps Studio – Fix Hidden Revenue Leaks",
   description:
-    "A brutal audit that finds where creators lose leads, sales, and money — and how to fix it fast.",
+    "A brutal audit that finds where creators lose leads, sales, and money — and what to fix first.",
   metadataBase: new URL("https://creatorops.studio"),
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    
+  },
+
   openGraph: {
-    title: "You’re Losing Revenue Every Month — And You Don’t Know Where.",
+    title: "You’re Losing Revenue Every Month — And You Don’t Know Where",
     description:
-      "A brutal audit that finds where creators lose leads, sales, and money — and how to fix it fast.",
+      "A brutal revenue leak audit for creators to uncover where leads, sales, and money are slipping — and what to fix first.",
     url: "https://creatorops.studio",
     siteName: "CreatorOps Studio",
     images: [
@@ -34,6 +41,7 @@ export const metadata: Metadata = {
     ],
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
     title: "You’re Losing Revenue Every Month",
@@ -72,4 +80,5 @@ export default function RootLayout({
     </html>
   );
 }
+
 
