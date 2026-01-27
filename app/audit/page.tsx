@@ -1,165 +1,94 @@
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Revenue Leak Audit for Creators | Find Where You’re Losing Money",
-  description:
-    "A brutal revenue leak audit for creators to uncover where leads, sales, and money are slipping — and what to fix first. Clarity, not guesswork.",
-};
-
 export default function AuditPage() {
   return (
-    <main
-      style={{
-        maxWidth: "860px",
-        margin: "0 auto",
-        padding: "4rem 1.5rem",
-        fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
-        lineHeight: 1.6,
-      }}
-    >
+    <main className="relative text-white overflow-hidden bg-slate-950">
+
+      {/* Background Gradient Glow */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-blue-600/20 blur-[140px] rounded-full" />
+        <div className="absolute bottom-[-200px] right-[-100px] w-[600px] h-[600px] bg-purple-600/20 blur-[140px] rounded-full" />
+      </div>
+
       {/* HERO */}
-      <h1 style={{ fontSize: "2.6rem", fontWeight: 800, lineHeight: 1.2 }}>
-        A brutal audit that finds where creators lose leads, sales, and money —
-        <br />
-        <span style={{ opacity: 0.7 }}>and how to fix it fast.</span>
-      </h1>
+      <section className="px-6 py-24 max-w-5xl mx-auto bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900/60">
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          A brutal audit that finds where creators lose leads, sales, and money — and how to fix it fast.
+        </h1>
 
-      <p style={{ marginTop: "1.5rem", fontSize: "1.1rem", opacity: 0.85 }}>
-        Most creators don’t have a traffic problem.
-        <br />
-        <strong>They have a leak problem.</strong>
-      </p>
-
-      {/* WHAT IT IS */}
-      <section style={{ marginTop: "3rem" }}>
-        <h2 style={{ fontSize: "1.6rem", fontWeight: 700 }}>
-          What the Revenue Leak Audit looks at
-        </h2>
-
-        <ul style={{ marginTop: "1rem", paddingLeft: "1.2rem" }}>
-          <li>Lead capture & funnels</li>
-          <li>Offers & pricing logic</li>
-          <li>DM flows & conversion gaps</li>
-          <li>Systems, tools, and handoffs</li>
-        </ul>
-      </section>
-
-      {/* WHO IT IS FOR */}
-      <section
-        style={{
-          marginTop: "3rem",
-          padding: "2rem",
-          border: "1px solid rgba(0,0,0,0.12)",
-          borderRadius: "14px",
-        }}
-      >
-        <h2 style={{ fontSize: "1.6rem", fontWeight: 700 }}>
-          This is for you if:
-        </h2>
-
-        <ul style={{ marginTop: "1rem", paddingLeft: "1.2rem" }}>
-          <li>You already have an audience (10k+ followers)</li>
-          <li>You’re making money, but it’s inconsistent</li>
-          <li>You feel growth is slower than it should be</li>
-          <li>You don’t know where you’re bleeding revenue</li>
-        </ul>
-      </section>
-
-      {/* EXPECTATION SETTING */}
-      <section style={{ marginTop: "3rem" }}>
-        <h2 style={{ fontSize: "1.5rem", fontWeight: 700 }}>
-          Important expectations
-        </h2>
-
-        <p style={{ marginTop: "1rem", opacity: 0.85 }}>
-          This is <strong>not</strong> a tool, course, or done-for-you service.
-          <br />
-          This is a <strong>diagnostic audit</strong>.
+        <p className="mt-6 text-slate-300 text-lg">
+          Most creators don’t have a traffic problem. <br />
+          <span className="font-semibold text-white">They have a leak problem.</span>
         </p>
 
-        <p style={{ marginTop: "0.8rem", opacity: 0.85 }}>
-          You’ll receive clear identification of leaks, prioritized fixes, and
-          what to address first. Implementation is up to you or your team.
-        </p>
+        <div className="mt-12">
+          <h2 className="text-2xl font-semibold mb-4">
+            What the Revenue Leak Audit looks at
+          </h2>
+
+          <ul className="space-y-3 text-slate-300">
+            <li>• Lead capture & funnels</li>
+            <li>• Offers & pricing logic</li>
+            <li>• DM flows & conversion gaps</li>
+            <li>• Systems, tools, and handoffs</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* WHO IT'S FOR */}
+      <section className="px-6 py-20 bg-gradient-to-b from-slate-900 to-slate-950 border-y border-slate-800/60">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6">This is for you if:</h2>
+
+          <ul className="space-y-3 text-slate-300 mb-12">
+            <li>• You already have an audience (10k+ followers)</li>
+            <li>• You’re making money, but it’s inconsistent</li>
+            <li>• You feel growth is slower than it should be</li>
+            <li>• You don’t know where you’re bleeding revenue</li>
+          </ul>
+
+          <h3 className="text-2xl font-semibold mb-4">Important expectations</h3>
+          <p className="text-slate-400 mb-4">This is not a tool, course, or done-for-you service.</p>
+          <p className="text-slate-400 mb-4">This is a diagnostic audit.</p>
+          <p className="text-slate-400">
+            You’ll receive clear identification of leaks, prioritized fixes, and what to address first.
+          </p>
+        </div>
       </section>
 
       {/* GUARANTEE */}
-      <section
-        style={{
-          marginTop: "3rem",
-          padding: "2rem",
-          borderLeft: "4px solid #000",
-          background: "rgba(0,0,0,0.03)",
-          borderRadius: "10px",
-        }}
-      >
-        <h2 style={{ fontSize: "1.4rem", fontWeight: 700 }}>
-          Clarity Guarantee
-        </h2>
-
-        <p style={{ marginTop: "0.8rem", opacity: 0.85 }}>
-          If you don’t leave with a clearer understanding of where your revenue
-          leaks are and what to fix first, you’ll get a refund.
-        </p>
-      </section>
-
-      {/* PRICING + CTA */}
-      <section
-        style={{
-          marginTop: "4rem",
-          padding: "2.5rem",
-          border: "2px solid #000",
-          borderRadius: "18px",
-          textAlign: "center",
-        }}
-      >
-        <h2 style={{ fontSize: "1.9rem", fontWeight: 800 }}>
-          Revenue Leak Audit
-        </h2>
-
-        <p style={{ marginTop: "0.4rem", opacity: 0.7 }}>
-          One-time deep diagnostic
-        </p>
-
-        <div
-          style={{
-            marginTop: "1.5rem",
-            fontSize: "2.5rem",
-            fontWeight: 800,
-          }}
-        >
-          $59
+      <section className="px-6 py-20 bg-slate-950">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold mb-4">Clarity Guarantee</h2>
+          <p className="text-slate-300">
+            If you don’t leave with a clearer understanding of where your revenue leaks are and what to fix first, you’ll get a refund.
+          </p>
         </div>
-
-        <p style={{ marginTop: "0.5rem", fontSize: "0.95rem", opacity: 0.7 }}>
-          Paid upfront • Limited founding slots
-        </p>
-
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSd9MStmB247Cx4-AlC0AdqaP0BoGGqX8_v3xVTkTcFMda_jgA/viewform"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            display: "inline-block",
-            marginTop: "2rem",
-            padding: "1.2rem 3rem",
-            backgroundColor: "#000",
-            color: "#fff",
-            fontWeight: 800,
-            fontSize: "1.05rem",
-            borderRadius: "14px",
-            textDecoration: "none",
-          }}
-        >
-          Apply for the Revenue Leak Audit
-        </a>
-
-        <p style={{ marginTop: "1rem", fontSize: "0.85rem", opacity: 0.6 }}>
-          Every audit is reviewed personally.
-If we can’t provide meaningful value, you’ll be refunded.
-
-        </p>
       </section>
+
+      {/* PRICING CARD */}
+      <section className="px-6 pb-32">
+        <div className="relative max-w-xl mx-auto bg-slate-900/80 backdrop-blur border border-slate-700/60 rounded-2xl p-10 text-center shadow-2xl">
+          <div className="absolute -inset-px rounded-2xl bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 blur-xl -z-10"></div>
+
+          <h2 className="text-3xl font-bold mb-2">Revenue Leak Audit</h2>
+          <p className="text-slate-400 mb-6">One-time deep diagnostic</p>
+
+          <div className="text-5xl font-bold mb-2">$59</div>
+          <p className="text-slate-400 mb-8">Paid upfront • Limited founding slots</p>
+
+          <a
+            href="https://forms.gle/YOUR_FORM_LINK"
+            target="_blank"
+            className="block w-full bg-white text-black font-semibold py-4 rounded-lg hover:bg-slate-200 transition"
+          >
+            Apply for the Revenue Leak Audit
+          </a>
+
+          <p className="text-xs text-slate-500 mt-6">
+            Every audit is reviewed personally. If we can’t provide meaningful value, you’ll be refunded.
+          </p>
+        </div>
+      </section>
+
     </main>
-  );
+  )
 }
