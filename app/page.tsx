@@ -6,10 +6,10 @@ export default function HomePage() {
       <section className="px-6 py-24 text-center max-w-5xl mx-auto">
         <h1 className="text-4xl md:text-6xl font-bold leading-tight">
           You’re Losing Revenue Every Month — <br />
-          And You Don’t Know Where.
+          <span className="text-slate-300">And You Don’t Know Where.</span>
         </h1>
 
-        <p className="mt-6 text-lg text-slate-300">
+        <p className="mt-6 text-lg text-slate-400">
           LeakOps audits your creator business to uncover hidden leaks in leads,
           funnels, offers, DMs, and systems.
         </p>
@@ -21,7 +21,7 @@ export default function HomePage() {
           Get a Revenue Leak Audit
         </a>
 
-        <p className="mt-4 text-sm text-slate-400">
+        <p className="mt-4 text-sm text-slate-500">
           Built for creators already making money (10k+ followers)
         </p>
       </section>
@@ -36,16 +36,18 @@ export default function HomePage() {
           <div className="bg-slate-900 p-6 rounded-xl">
             <ul className="space-y-3 text-slate-300">
               <li>✔ You already make money as a creator or coach</li>
-              <li>✔ You feel growth has plateaued</li>
+              <li>✔ Your growth has plateaued</li>
               <li>✔ You know systems matter but haven’t fixed them</li>
+              <li>✔ You want higher revenue without more content grind</li>
             </ul>
           </div>
 
           <div className="bg-slate-900 p-6 rounded-xl">
-            <ul className="space-y-3 text-slate-300">
+            <ul className="space-y-3 text-slate-400">
               <li>❌ Not for beginners</li>
               <li>❌ Not for “post more content” advice</li>
               <li>❌ Not for theory — this is execution</li>
+              <li>❌ Not if you aren’t ready to implement</li>
             </ul>
           </div>
         </div>
@@ -57,6 +59,7 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold mb-6">
             Fix the Leaks Before You Scale More Traffic
           </h2>
+
           <p className="text-slate-400 max-w-3xl mx-auto mb-12">
             Scaling broken systems doesn’t grow revenue — it burns money faster.
             This audit shows you exactly what to fix before you scale.
@@ -69,12 +72,14 @@ export default function HomePage() {
                 Deep review of funnels, DMs, offers, and traffic paths.
               </p>
             </div>
+
             <div className="bg-slate-800 p-6 rounded-xl">
               <h3 className="font-semibold mb-2">🧠 Exact Fixes</h3>
               <p className="text-slate-400 text-sm">
                 Clear, prioritized actions — what to fix first and why.
               </p>
             </div>
+
             <div className="bg-slate-800 p-6 rounded-xl">
               <h3 className="font-semibold mb-2">⚡ Fast Execution</h3>
               <p className="text-slate-400 text-sm">
@@ -109,18 +114,21 @@ export default function HomePage() {
               Visitors watch, scroll, or DM — then disappear. No capture. No follow-up.
             </p>
           </div>
+
           <div className="bg-slate-900 p-6 rounded-xl">
             <h3 className="font-semibold mb-2">🧩 Funnel Breaks</h3>
             <p className="text-slate-400 text-sm">
               Funnels exist, but friction and confusion kill conversions.
             </p>
           </div>
+
           <div className="bg-slate-900 p-6 rounded-xl">
             <h3 className="font-semibold mb-2">💬 DM Monetization Gaps</h3>
             <p className="text-slate-400 text-sm">
               Conversations happen — sales don’t. No structure. No close.
             </p>
           </div>
+
           <div className="bg-slate-900 p-6 rounded-xl">
             <h3 className="font-semibold mb-2">💸 Weak Offers</h3>
             <p className="text-slate-400 text-sm">
@@ -144,12 +152,14 @@ export default function HomePage() {
                 We analyze your traffic, offers, funnels, and DMs.
               </p>
             </div>
+
             <div className="bg-slate-800 p-6 rounded-xl">
               <h3 className="font-semibold mb-2">2. Reveal</h3>
               <p className="text-slate-400 text-sm">
                 You get a clear breakdown of what’s broken or missing.
               </p>
             </div>
+
             <div className="bg-slate-800 p-6 rounded-xl">
               <h3 className="font-semibold mb-2">3. Fix</h3>
               <p className="text-slate-400 text-sm">
