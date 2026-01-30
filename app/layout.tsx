@@ -2,10 +2,10 @@ import "./globals.css";
 import type { ReactNode } from "react";
 
 export const metadata = {
-  title: "LeakOps — Revenue Leak Audit for Creators",
+  title: "CreatorOps Studio — Revenue Leak Audit for Creators",
   description:
-    "Find exactly where leads, sales, and money are leaking — and what to fix first. A brutal revenue leak audit for serious creators.",
-  
+    "Find exactly where leads, sales, and money are leaking — and what to fix first. A deep diagnostic audit for serious creators.",
+
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
@@ -13,17 +13,17 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "LeakOps — Find Where Your Revenue Is Leaking",
+    title: "Find Where Your Creator Revenue Is Leaking",
     description:
-      "A brutal audit that shows creators exactly where money is leaking — and how to fix it fast.",
+      "A deep diagnostic audit that shows creators exactly where money is slipping — and what to fix first.",
     url: "https://creatorops.studio",
-    siteName: "LeakOps",
+    siteName: "CreatorOps Studio",
     images: [
       {
         url: "https://creatorops.studio/og-image.png",
         width: 1200,
         height: 630,
-        alt: "LeakOps Revenue Leak Audit",
+        alt: "Revenue Leak Audit for Creators",
       },
     ],
     type: "website",
@@ -31,13 +31,12 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "LeakOps — Revenue Leak Audit",
+    title: "Revenue Leak Audit for Creators",
     description:
-      "Discover where your creator business is leaking revenue and what to fix first.",
+      "Find where your leads, sales, and money are leaking — and fix it fast.",
     images: ["https://creatorops.studio/og-image.png"],
   },
 };
-
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -48,3 +47,4 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     </html>
   );
 }
+
