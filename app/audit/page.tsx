@@ -1,3 +1,4 @@
+
 export default function AuditPage() {
   return (
     <main className="relative text-white overflow-hidden bg-slate-950">
@@ -64,27 +65,29 @@ export default function AuditPage() {
         </div>
       </section>
 
-      {/* PRICING CARD */}
+      {/* APPLICATION FORM (TALLY EMBED) */}
       <section className="px-6 pb-32">
-        <div className="relative max-w-xl mx-auto bg-slate-900/80 backdrop-blur border border-slate-700/60 rounded-2xl p-10 text-center shadow-2xl">
+        <div className="relative max-w-3xl mx-auto bg-slate-900/80 backdrop-blur border border-slate-700/60 rounded-2xl p-6 md:p-10 shadow-2xl">
           <div className="absolute -inset-px rounded-2xl bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 blur-xl -z-10"></div>
 
-          <h2 className="text-3xl font-bold mb-2">Revenue Leak Audit</h2>
-          <p className="text-slate-400 mb-6">One-time deep diagnostic</p>
+          <h2 className="text-3xl font-bold mb-2 text-center">Apply for the Revenue Leak Audit</h2>
+          <p className="text-slate-400 mb-8 text-center">
+            Fill this out so we can understand where your revenue leaks are happening. Serious creators only.
+          </p>
 
-          <div className="text-5xl font-bold mb-2">$59</div>
-          <p className="text-slate-400 mb-8">Paid upfront • Limited founding slots</p>
+          <iframe
+            src="https://tally.so/r/yPYNQB"
+            width="100%"
+            height="900"
+            frameBorder="0"
+            marginHeight={0}
+            marginWidth={0}
+            title="Revenue Leak Audit Application"
+            className="rounded-xl"
+          ></iframe>
 
-          <a
-            href="https://forms.gle/YOUR_FORM_LINK"
-            target="_blank"
-            className="block w-full bg-white text-black font-semibold py-4 rounded-lg hover:bg-slate-200 transition"
-          >
-            Apply for the Revenue Leak Audit
-          </a>
-
-          <p className="text-xs text-slate-500 mt-6">
-            Every audit is reviewed personally. If we can’t provide meaningful value, you’ll be refunded.
+          <p className="text-xs text-slate-500 mt-6 text-center">
+            ⚠ We only take 5 audits per week to keep reviews high quality.
           </p>
         </div>
       </section>
