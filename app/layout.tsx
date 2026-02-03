@@ -4,18 +4,13 @@ import type { ReactNode } from "react";
 export const metadata = {
   title: "CreatorOps Studio — Revenue Leak Audit for Creators",
   description:
-    "Find exactly where leads, sales, and money are leaking — and what to fix first. A deep diagnostic audit for serious creators.",
-
+    "Find exactly where leads, sales, and money are leaking — and what to fix first.",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/favicon.ico",
   },
-
   openGraph: {
-    title: "Find Where Your Creator Revenue Is Leaking",
-    description:
-      "A deep diagnostic audit that shows creators exactly where money is slipping — and what to fix first.",
     url: "https://creatorops.studio",
     siteName: "CreatorOps Studio",
     images: [
@@ -28,7 +23,6 @@ export const metadata = {
     ],
     type: "website",
   },
-
   twitter: {
     card: "summary_large_image",
     title: "Revenue Leak Audit for Creators",
@@ -41,10 +35,34 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-slate-950 text-white min-h-screen">
+      <body className="bg-slate-950 text-white">
+
+        {/* 🔝 Top Navigation */}
+        <header className="w-full border-b border-slate-800">
+          <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+
+            {/* Brand */}
+            <a href="/" className="text-lg font-semibold tracking-wide">
+              CreatorOps Studio
+            </a>
+
+            {/* Right Side Links */}
+            <nav className="flex gap-6 text-sm text-slate-400">
+              <a href="/faq" className="hover:text-white transition">FAQ</a>
+              <a href="/privacy" className="hover:text-white transition">Privacy</a>
+              <a href="/terms" className="hover:text-white transition">Terms</a>
+            </nav>
+
+          </div>
+        </header>
+
+        {/* Page Content */}
         {children}
+
       </body>
     </html>
   );
 }
+
+
 
