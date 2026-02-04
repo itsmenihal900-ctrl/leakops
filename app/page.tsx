@@ -1,4 +1,28 @@
+"use client";
+import { useEffect, useState } from "react";
+
 export default function HomePage() {
+  const [spotsLeft, setSpotsLeft] = useState<number | null>(null);
+
+  useEffect(() => {
+    async function fetchSpots() {
+      try {
+        const res = await fetch(
+          "https://docs.google.com/spreadsheets/d/e/2PACX-1vRmZTx0V-83_HZtMp_AaPIAUz96XiC6HEcRYOdt1CbUjJQ4J_OnAHA0jzWN93cQ7Cgr69Wp-KnjQkw4/pub?output=csv"
+        );
+        const text = await res.text();
+        const rows = text.split("\n");
+        const secondRow = rows[1].split(",");
+        const spots = parseInt(secondRow[18]); // Column S
+        setSpotsLeft(spots);
+      } catch (err) {
+        console.error("Failed to fetch spots:", err);
+      }
+    }
+
+    fetchSpots();
+  }, []);
+
   return (
     <main className="bg-slate-950 text-white">
 
@@ -13,6 +37,12 @@ export default function HomePage() {
           LeakOps audits your creator business to uncover hidden leaks in leads,
           funnels, offers, DMs, and systems.
         </p>
+
+        {spotsLeft !== null && (
+          <div className="mt-6 text-lg font-semibold text-red-400">
+            ⚠ Only {spotsLeft} audit spots left this week
+          </div>
+        )}
 
         <a
           href="/audit"
@@ -88,15 +118,21 @@ export default function HomePage() {
             </div>
           </div>
 
-          <p className="text-yellow-400 text-sm mt-8">
-            ⚠ Limited capacity: Only 5 audits per week to maintain quality.
-          </p>
+          {spotsLeft !== null && spotsLeft === 0 ? (
+            <p className="text-yellow-400 text-sm mt-8">
+              🚫 All audit spots filled this week — join waitlist
+            </p>
+          ) : (
+            <p className="text-yellow-400 text-sm mt-8">
+              ⚠ Limited capacity: Only {spotsLeft ?? "a few"} audits per week
+            </p>
+          )}
 
           <a
             href="/audit"
             className="inline-block mt-6 bg-white text-black font-semibold px-8 py-3 rounded-lg hover:bg-slate-200 transition"
           >
-            Get a Revenue Leak Audit
+            {spotsLeft === 0 ? "Join Waitlist" : "Get a Revenue Leak Audit"}
           </a>
         </div>
       </section>
@@ -180,10 +216,10 @@ export default function HomePage() {
           href="/audit"
           className="inline-block bg-white text-black font-semibold px-10 py-4 rounded-lg hover:bg-slate-200 transition"
         >
-          Get a Revenue Leak Audit
+          {spotsLeft === 0 ? "Join Waitlist" : "Get a Revenue Leak Audit"}
         </a>
       </section>
 
     </main>
-  )
+  );
 }
