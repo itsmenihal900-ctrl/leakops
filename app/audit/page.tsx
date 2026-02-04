@@ -125,7 +125,7 @@ export default function AuditPage() {
                 Join the waitlist and you’ll get priority when spots reopen.
               </p>
               <a
-  href="https://tally.so/r/mWAITLIST"
+  href="https://tally.so/r/yPYNQB"
   className="inline-block bg-white text-black font-semibold px-8 py-3 rounded-lg hover:bg-slate-200 transition"
 >
   Join the Waitlist
