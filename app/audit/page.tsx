@@ -1,5 +1,28 @@
+"use client";
+import { useEffect, useState } from "react";
 
 export default function AuditPage() {
+  const [spotsLeft, setSpotsLeft] = useState<number | null>(null);
+
+  useEffect(() => {
+    async function fetchSpots() {
+      try {
+        const res = await fetch(
+          "https://docs.google.com/spreadsheets/d/e/2PACX-1vRmZTx0V-83_HZtMp_AaPIAUz96XiC6HEcRYOdt1CbUjJQ4J_OnAHA0jzWN93cQ7Cgr69Wp-KnjQkw4/pub?output=csv"
+        );
+        const text = await res.text();
+        const rows = text.split("\n");
+        const secondRow = rows[1].split(",");
+        const spots = parseInt(secondRow[18]);
+        setSpotsLeft(spots);
+      } catch (err) {
+        console.error("Failed to fetch spots:", err);
+      }
+    }
+
+    fetchSpots();
+  }, []);
+
   return (
     <main className="relative text-white overflow-hidden bg-slate-950">
 
@@ -75,23 +98,44 @@ export default function AuditPage() {
             Fill this out so we can understand where your revenue leaks are happening. Serious creators only.
           </p>
 
-          <iframe
-            src="https://tally.so/r/yPYNQB"
-            width="100%"
-            height="900"
-            frameBorder="0"
-            marginHeight={0}
-            marginWidth={0}
-            title="Revenue Leak Audit Application"
-            className="rounded-xl"
-          ></iframe>
+          {spotsLeft !== null && spotsLeft > 0 ? (
+            <>
+              <iframe
+                src="https://tally.so/r/yPYNQB"
+                width="100%"
+                height="900"
+                frameBorder="0"
+                marginHeight={0}
+                marginWidth={0}
+                title="Revenue Leak Audit Application"
+                className="rounded-xl"
+              ></iframe>
 
-          <p className="text-xs text-slate-500 mt-6 text-center">
-            ⚠ We only take 5 audits per week to keep reviews high quality.
-          </p>
+              <p className="text-xs text-slate-500 mt-6 text-center">
+                ⚠ We only take {spotsLeft} more audits this week to keep reviews high quality.
+              </p>
+            </>
+          ) : (
+            <div className="text-center py-16">
+              <h3 className="text-2xl font-bold text-yellow-400 mb-4">
+                🚫 This Week’s Audit Slots Are Full
+              </h3>
+              <p className="text-slate-400 mb-6">
+                We only take 5 audits per week to maintain quality.  
+                Join the waitlist and you’ll get priority when spots reopen.
+              </p>
+              <a
+  href="https://tally.so/r/mWAITLIST"
+  className="inline-block bg-white text-black font-semibold px-8 py-3 rounded-lg hover:bg-slate-200 transition"
+>
+  Join the Waitlist
+</a>
+
+            </div>
+          )}
         </div>
       </section>
 
     </main>
-  )
+  );
 }
